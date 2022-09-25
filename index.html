@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        body,
+        html,
+        .wrapper {
+            width: 100%;
+            height: 100%;
+
+        }
+
+        body {
+            margin: 0;
+            overflow-y: hidden;
+            overflow-x: hidden;
+            background: rgb(188, 178, 178);
+
+        }
+
+        .wrapper {
+
+            display: grid;
+            grid-template-columns: repeat(4, 25%);
+            grid-template-rows: repeat(3, 1fr);
+            grid-gap: 10px;
+
+            grid-template-areas:
+                "aside header header side"
+                "aside article article2 main"
+                "aside article3 article4 main"
+        }
+
+
+        .aside {
+            background-color: green;
+            grid-row: 1/4;
+        }
+
+        .header {
+            font-size: 30px;
+            text-align: center;
+            grid-area: header;
+            background: green;
+
+        }
+
+
+        .article {
+            grid-area: article;
+            background: orange;
+        }
+
+        .article2 {
+            grid-area: article2;
+            background: red;
+        }
+
+        .article3 {
+            grid-area: article3;
+            background: red;
+        }
+
+        .article4 {
+            grid-area: article4;
+            background: orange;
+        }
+
+        .side {
+            grid-area: side;
+            background: red;
+        }
+
+        .main {
+            grid-area: main;
+            background: green;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <aside class="aside"></aside>
+        <header class="header">GRID - CSS</header>
+        <article class="article"></article>
+        <article2 class="article2"></article2>
+        <article3 class="article3"></article3>
+        <article4 class="article4"></article4>
+        <side class="side"></side>
+        <main class="main"></main>
+    </div>
+</body>
+
+</html>
+
+<body>
